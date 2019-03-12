@@ -1,0 +1,10 @@
+Mert Bekar, 2035749
+
+cipher.cpp read ciphertext from "ciphertext"
+cipher.cpp read plaintext from "plaintext.txt"
+cipher.cpp read possible keys from "words.txt"
+
+cipher.cpp write output to terminal as a string.
+
+This command can be used for compile: $ g++ -o out cipher.cpp -lcrypto -ldl
+This command can be used for run: ./out

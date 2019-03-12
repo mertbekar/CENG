@@ -1,0 +1,3 @@
+References: https://github.com/sunkyzz/Syn-flood-attack/blob/master/syn.py
+
+Run with these command: python tcpsyn.py <destination ip> <destination port>

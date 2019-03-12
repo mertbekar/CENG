@@ -1,0 +1,7 @@
+Mert Bekar, 2035749
+
+First Argument is ciphertext. Ciphertext should be in string format like "oä+ÓmÅ\«–Zð¶KÎœÙ>)xB¹¡‘—‰´"
+
+Second Argument is desired plaintext. Desired plaintext should be in string format like "attacked"
+
+The output is printed to terminal as a string format.
