@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+
+%misc libraries goes here
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+\begin{document}
+
+\noindent
+\HRule \\[3mm]
+\begin{flushright}
+
+                                         \LARGE \textbf{CENG 222}  \\[4mm]
+                                         \Large Statistical Methods for Computer Engineering \\[4mm]
+                                        \normalsize      Spring '2016-2017 \\
+                                           \Large   Assignment 3 \\
+					
+\end{flushright}
+\HRule
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Mert Bekar \\
+Id Number : 2035749 \\
+
+% Write your answers below the section tags
+\section*{A}
+
+I calculated probabilty that more than 25 fishs in this part. I found size with using Monte Carlo study.\\
+I looked table A4 for find try number N, so observe that $N = 38416$\\ 
+Then, i used $poissrnd$ function to find number of catched fish in three hours,like $poissrnd(12)$(Poisson Number = 4, time = 3 hours)\\
+Afterwards, i calculated weight of one fish with rejection method and i done this calculation $poissrnd(12)$ time. In this moment, i have total weight for one try and i could decide total weight bigger than 25 kg or not. I save all bigger conditions.\\
+Then, i calculated this process 38416 time. I summed all total weight for all tries.\\
+Finally, i found probabilty with dividing number of all bigger condition with number of all tries(38416).
+
+
+
+
+\section*{B}
+
+I have founded all total weight in part A.\\
+I divide all total weight to number of tries(38416) and i obtain average easily.\\
+
+
+
+\section*{C}
+
+For calculate standard deviation, i save weight of all tries one-to-one in array. I summed all difference of average from array elements one-to-one. I find squrate root of sum/(n-1) where n-1 = 38415. So, i obtained standard deviation. 
+
+
+\end{document}
+
