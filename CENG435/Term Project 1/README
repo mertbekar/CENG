@@ -1,0 +1,54 @@
+Doğancan Kartal, 2036028
+Mert Bekar, 2035749
+
+This project includes 21 files.
+
+There are 5 python scripts for nodes. We create and implement 's.py' for source node, 'b.py' for broker node, 'r1.py' for router 1 node, 'r2.py' for router 2 node and 'd.py' for destination node. This project are executed with 3 steps.
+
+Step 1: Connect to machines, put the files into these machines and set delays according to topology.
+	Setting Delays For Experiment 1:
+			Run following commands on 'b' machine:
+								"sudo tc qdisc add dev eth1 root netem delay 1ms 5ms distribution normal"
+								"sudo tc qdisc add dev eth3 root netem delay 1ms 5ms distribution normal"
+			Run following commands on 'r1' machine:
+								"sudo tc qdisc add dev eth1 root netem delay 1ms 5ms distribution normal"
+			Run following commands on 'r1' machine:
+								"sudo tc qdisc add dev eth2 root netem delay 1ms 5ms distribution normal"
+	Setting Delays For Experiment 2:
+			Run following commands on 'b' machine:
+								"sudo tc qdisc change dev eth1 root netem delay 20ms 5ms distribution normal"
+								"sudo tc qdisc change dev eth3 root netem delay 20ms 5ms distribution normal"
+			Run following commands on 'r1' machine:
+								"sudo tc qdisc change dev eth1 root netem delay 20ms 5ms distribution normal"
+			Run following commands on 'r1' machine:
+								"sudo tc qdisc change dev eth2 root netem delay 20ms 5ms distribution normal"
+	Setting Delays For Experiment 3:
+			Run following commands on 'b' machine:
+								"sudo tc qdisc change dev eth1 root netem delay 60ms 5ms distribution normal"
+								"sudo tc qdisc change dev eth3 root netem delay 60ms 5ms distribution normal"
+			Run following commands on 'r1' machine:
+								"sudo tc qdisc change dev eth1 root netem delay 60ms 5ms distribution normal"
+			Run following commands on 'r1' machine:
+								"sudo tc qdisc change dev eth2 root netem delay 60ms 5ms distribution normal"
+Step 2: Synchronize times of machines.
+	To synchronize time of machines, run following commands on 's' and 'd' machines:
+											"sudo service ntp stop"
+											"sudo ntpdate -s time.nist.gov"
+											"sudo service ntp start"
+Step 3: Execute python scripts.
+	For destination node, run following command on 'd' machine: "python d.py"
+	For router 2 node, run following command on 'r2' machine: "python r2.py"
+	For router 1 node, run following command on 'r1' machine: "python r1.py"
+	For broker node, run following command on 'b' machine: "python b.py"
+	For source node, run following command on 's' machine: "python s.py"
+		Important Note: Order of these commands not important except for source node. The command of source node should be executed last order.
+
+There are 3 '.csv' files named "delays_1.csv", "delays_20.csv" and "delays_60.csv". These files stores end-to-end delays for each packet respectively experiment 1, experiment 2 and experiment 3. We create these files to construct histogram file for each experiment.
+
+There are 3 '.csv' files named "histogram_1.csv", "histogram_20.csv" and "histogram_60.csv". These files stores packet count for each end-to-end delay value respectively experiment 1, experiment 2 and experiment 3. We create these files to construct histograms for each experiment.
+
+There are 2 python scripts named "histogram.py" and "vs_graph.py". The script which named "histogram.py" creates histogram graphs for experiments. The other script which named "vs_graph.py" creates "Network Emulation Delay versus End-To-End Delay" graphs for exeriments
+
+There are 5 '.png' files for graphs. Also, there is a '.tex' file named "main.tex" for the project report. We use "overleaf" for create and fill this '.tex' file.
+
+Last two files are "TP_Part1_17" which is report of this part of term project and this file, "README".
