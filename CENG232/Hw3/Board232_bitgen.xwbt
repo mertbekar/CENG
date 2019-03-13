@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/bs02/e2035749/Desktop/lab3_COW/Board232.ncd
+OUTFILE=/home/bs02/e2035749/Desktop/lab3_COW/Board232.bit
+FAMILY=Spartan3E
+PART=xc3s250e-5cp132
+WORKINGDIR=/home/bs02/e2035749/Desktop/lab3_COW
+LICENSE=WebPack
+USER_INFO=0_0_835

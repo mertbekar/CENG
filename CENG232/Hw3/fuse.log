@@ -1,0 +1,20 @@
+Running: /depo/shared/progs/Xilinx/12.4/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/bs02/e2035749/Desktop/lab3_COW/Mux32_isim_beh.exe -prj /home/bs02/e2035749/Desktop/lab3_COW/Mux32_beh.prj work.Mux32 work.glbl 
+ISim M.81d (signature 0x9ca8bed6)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file \"/home/bs02/e2035749/Desktop/lab3_COW/Mux32.v\" into library work
+Analyzing Verilog file \"/depo/shared/progs/Xilinx/12.4/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 69672 KB
+Fuse CPU Usage: 60 ms
+Compiling module Mux32
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 2 Verilog Units
+Built simulation executable /home/bs02/e2035749/Desktop/lab3_COW/Mux32_isim_beh.exe
+Fuse Memory Usage: 1154120 KB
+Fuse CPU Usage: 70 ms
+GCC CPU Usage: 140 ms

@@ -1,0 +1,5 @@
+set -tmpdir "/home/bs02/e2035749/Desktop/lab3_COW/xst/projnav.tmp"
+set -xsthdpdir "/home/bs02/e2035749/Desktop/lab3_COW/xst"
+elaborate
+-ifn ALU.prj
+-ifmt mixed
