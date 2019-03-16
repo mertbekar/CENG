@@ -1,2 +1,2 @@
 all:
-	gcc -o recover hw3.c
+	gcc hw3.c -o recover
